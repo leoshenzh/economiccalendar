@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Economic Calendar</title>
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* Adjust this value to control the aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid #ccc; /* Optional: adds a border around the iframe */
+            border-radius: 8px; /* Optional: adds rounded corners */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            transform: scale(0.8); /* Adjust the scale factor as needed */
+            transform-origin: 0 0;
+        }
+        .poweredBy {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #333333;
+            margin-top: 5px;
+        }
+        .poweredBy .underline_link {
+            color: #06529D;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .poweredBy .underline_link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=2,3&features=datepicker,timezone,timeselector,filters&countries=37,72,22,17,39,14,35,4,5&calType=day&timeZone=113&lang=1" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+    <div class="poweredBy">
+        <span>Real Time Economic Calendar provided by <a href="https://www.investing.com/" target="_blank" class="underline_link">Investing.com</a>.</span>
+    </div>
+</body>
+</html>
